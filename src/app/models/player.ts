@@ -1,5 +1,5 @@
 export interface Player {
-    PlayerNumber: number;
+    PlayerNumber: string;
     FirstName: string;
     LastName: string;
     Position: string;

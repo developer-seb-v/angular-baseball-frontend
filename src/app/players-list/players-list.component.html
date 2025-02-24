@@ -1,4 +1,21 @@
 <h2>Players</h2>
-<div >
-    <pre>{{ data | json }}</pre>
-  </div>
+<mat-card>
+  <mat-list>
+      <mat-list-item *ngFor="let player of players">
+        <span matListItemTitle>{{player.firstName}} {{player.lastName}} </span>
+        <span matListItemLine>{{player.playerNumber}}</span>
+        <span matListItemLine>{{player.position}}</span>
+        <span matListItemLine>{{player.country}}</span>
+      </mat-list-item>
+  </mat-list>
+
+</mat-card>
+
+  <!-- <li  *ngFor="let player of players">
+   {{player.firstName}}
+   {{player.lastName}}
+   {{player.playerNumber}}
+   {{player.position}}
+   {{player.country}}
+  </li> -->
+

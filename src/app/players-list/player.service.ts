@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Player } from '../models/player';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +14,14 @@ export class PlayerService {
 
   constructor(private http: HttpClient) {}
   
-  getData(): Observable<any> {
-     // Replace with your API endpoint
-    return this.http.get(this.apiUrl);
+
+  getPlayers(): Observable<any> {
+    return this.http.get<any>(this.apiUrl).pipe(
+      map(response => {
+        // You can do additional data manipulation or parsing here
+        return response; // Here we just return the parsed JSON object
+      })
+    );
   }
 
 }

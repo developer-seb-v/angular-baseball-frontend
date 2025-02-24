@@ -1,6 +1,7 @@
 import { Component, Injectable, OnInit } from '@angular/core';
-
+import { Player } from '../models/player';
 import { PlayerService } from './player.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-players-list',
@@ -10,15 +11,21 @@ import { PlayerService } from './player.service';
 
 @Injectable()
 export class PlayersListComponent implements OnInit{
-  data: any;
 
-  constructor(private service: PlayerService ){}
+  players: any;
+  constructor(private service: PlayerService){}
 
   ngOnInit(): void {
-    this.service.getData().subscribe(response => {
-      this.data = response; // Assign the JSON response to the data property
+    this.service.getPlayers().subscribe(response => {
+      this.players = response; // Parsed data is directly available here
+      console.log(this.players); // You can now render the data in the component
     });
   }
+
+
+
+  }
+  
  
 
-}
+
