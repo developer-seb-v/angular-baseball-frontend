@@ -22,10 +22,9 @@ export class PlayersListComponent implements OnInit{
     });
   }
 
+  
 
 
   }
   
  
-
-
