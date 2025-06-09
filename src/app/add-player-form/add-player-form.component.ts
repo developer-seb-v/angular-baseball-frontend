@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { MatCard } from '@angular/material/card';
+import { Component, inject, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+
 
 
 @Component({
@@ -9,6 +9,31 @@ import { MatCard } from '@angular/material/card';
   templateUrl: './add-player-form.component.html',
   styleUrls: ['./add-player-form.component.css']
 })
-export class AddPlayerFormComponent {
 
+export class AddPlayerFormComponent {
+  
+  // newer syntax for dependency injection
+ constructor(private fb: FormBuilder,
+             private http: HttpClient
+ ){}
+
+ playerForm = this.fb.group({
+    playerNumber: '',
+    firstName: ['', Validators.required],
+    lastName: '',
+    position:'',
+    country: ''
+  })
+
+
+  onSubmit(){
+   this.http.post('http://localhost:5151/api/player', this.playerForm.value ).
+   subscribe((res) => {
+    console.log(res);
+   })
+  }
+  
 }
+
+
+

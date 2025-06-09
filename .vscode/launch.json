@@ -3,6 +3,14 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "name": "Launch project in firefox",
+      "url": "http://localhost:4200/",
+      "file": "${workspaceFolder}/index.html"
+    },
+    {
       "name": "ng serve",
       "type": "chrome",
       "request": "launch",

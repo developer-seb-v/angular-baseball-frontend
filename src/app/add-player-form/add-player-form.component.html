@@ -1,19 +1,18 @@
-
-<mat-card>
-    <mat-card-header>
-      <mat-card-title>Add Player</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <form>
-        <mat-form-field appearance="outline">
-          <mat-label>First Name</mat-label>
-          <input matInput type="text" placeholder="First Name">
-        </mat-form-field> 
-        <mat-form-field appearance="outline">
-          <mat-label>Last Name</mat-label>
-          <input matInput type="text" placeholder="Last Name">
-        </mat-form-field><br>
-        <mat-form-field appearance="outline">
-            <mat-label>Last Name</mat-label>
-            <input matInput type="text" placeholder="Last Name">
-          </mat-form-field>
+<form [formGroup]="playerForm" (ngSubmit)="onSubmit()">
+<label>player number</label>
+<input  formControlName="playerNumber" >
+<br>
+<label>first name</label>
+<input formControlName="firstName" >
+<br>
+<label>last name</label>
+<input formControlName="lastName" >
+<br>
+<label>position</label>
+<input formControlName="position" >
+<br>
+<label>country</label>
+<input formControlName="country" >
+<br>
+<button type="submit" >add player</button>
+</form>
