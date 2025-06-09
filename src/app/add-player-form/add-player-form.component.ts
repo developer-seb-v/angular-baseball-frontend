@@ -17,17 +17,21 @@ export class AddPlayerFormComponent {
              private http: HttpClient
  ){}
 
+header : HttpHeaders = new HttpHeaders({
+  'Content-Type' : "Application/Json"
+})
+
  playerForm = this.fb.group({
-    playerNumber: '',
+    playerNumber: ['', Validators.minLength(1)],
     firstName: ['', Validators.required],
-    lastName: '',
-    position:'',
-    country: ''
+    lastName: ['', Validators.required] ,
+    position:['', Validators.required],
+    country: ['', Validators. required]
   })
 
 
   onSubmit(){
-   this.http.post('http://localhost:5151/api/player', this.playerForm.value ).
+   this.http.post('http://localhost:5151/api/player/addplayerobject', this.playerForm.value, {headers: this.header} ).
    subscribe((res) => {
     console.log(res);
    })

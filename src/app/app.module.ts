@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
+// will most likely re-do code with modules for each component 
 @NgModule({
   declarations: [
     AppComponent,
