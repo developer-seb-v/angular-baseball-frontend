@@ -1,1 +1,26 @@
-<p>add-country-form works!</p>
+
+<div id="card">
+    <form id="form" [formGroup]="countryForm" (ngSubmit)="onSubmit()">
+    <label>Country Id</label>
+    <input  formControlName="countryId"  placeholder="e.g. unique number">
+    <br>
+    <label>Country Name</label>
+    <input formControlName="countryName" placeholder=" e.g. Canada">
+    <br>
+    <button type="submit" >Add Country</button>
+    </form>
+</div>
+<br>
+
+<div>
+    <h2>List of countries</h2>
+    <li *ngFor="let c of countries">
+       <span style="margin: 3px;">{{c.countryId}}</span> 
+       <span>{{c.countryName}}</span>
+    </li>
+ 
+</div>
+<!--
+will have to add validation for already existing country IDs.  
+ -->
+
