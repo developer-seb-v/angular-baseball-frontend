@@ -28,14 +28,19 @@ export class AddPlayerFormComponent implements OnInit {
     )
   }
 
-  goToHome(){
-    this.router.navigate(['player-list']);
+  goToAddCountry(){
+    this.router.navigate(['app-add-country-form']);
   }
+  
   countries: any;
 
   header: HttpHeaders = new HttpHeaders({
     'Content-Type': "Application/Json"
   })
+
+   goToHome(){
+    this.router.navigate(['player-list']);
+  }
 
   playerForm = this.fb.group({
     playerNumber: ['', Validators.minLength(1)],
@@ -62,7 +67,7 @@ export class AddPlayerFormComponent implements OnInit {
     {
        this.http.post('http://localhost:5151/api/player/addplayerobject', this.playerForm.value, { headers: this.header }).
       subscribe((res) => {
-        console.log(res);
+        console.log(res, this.goToHome());
       })
     }else {alert("Please fill out fields")}
    

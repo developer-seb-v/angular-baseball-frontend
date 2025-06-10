@@ -1,7 +1,7 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { PlayerService } from './player.service';
-import { MatButton } from '@angular/material/button';
-import { Player } from '../models/player';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -25,6 +25,8 @@ export class PlayersListComponent implements OnInit {
     });
   }
    
+
+
  deletePlayer(id: string) {
     this.service.deletePlayer(id).subscribe({
       next: res => console.log('Player deleted', res, window.location.reload()),

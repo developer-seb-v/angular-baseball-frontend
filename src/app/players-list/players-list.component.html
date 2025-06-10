@@ -6,9 +6,12 @@
         <mat-card-subtitle>{{player.playerNumber}}</mat-card-subtitle>
         <mat-card-subtitle>{{player.position}}</mat-card-subtitle>
         <mat-card-subtitle>{{player.country}}</mat-card-subtitle>
+        <mat-card-subtitle>
+      <button (click)="deletePlayer(player.playerNumber)" id="deleteBtn" style="color:darkslategray; border: 1px solid black;" mat-button="outlined" >Delete</button>
+
+        </mat-card-subtitle>
           <mat-card-content>
       <mat-card-actions>
-        <button (click)="deletePlayer(player.playerNumber)" id="deleteBtn" style="color:darkslategray; border: 2px solid black;" mat-button="outlined" >Delete player</button>
       </mat-card-actions>
     </mat-card-content>
       </mat-card-title-group>

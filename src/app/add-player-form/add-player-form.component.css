@@ -1,6 +1,11 @@
+
+
 #form {
  padding: 5px;
- margin-top: 10px;
+ margin: 10px;
+ flex: auto;
+ max-width: fit-content;
+ border: 1px black solid;
 }
 
 input {
@@ -13,5 +18,25 @@ select {
 }
 
 button {
-    margin-top: 3px;
+      display: block;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+    
+}
+
+a:link {
+    text-decoration: none;
+    
+}
+
+a:hover {
+  text-decoration: underline;
+  background-color:lightgreen;
+  cursor: pointer;
+  
 }

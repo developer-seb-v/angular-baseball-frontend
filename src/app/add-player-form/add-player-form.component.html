@@ -1,8 +1,8 @@
 
-<div >
+<div id="card">
 <form id="form" [formGroup]="playerForm" (ngSubmit)="onSubmit()">
 <label>Player Number</label>
-<input  formControlName="playerNumber"  placeholder="e.g. 10">
+<input  formControlName="playerNumber"  placeholder="e.g. 42">
 <br>
 <label>First Name</label>
 <input formControlName="firstName" placeholder=" e.g. Jackie">
@@ -28,7 +28,7 @@
 </form>
 </div>
 <h3 style="margin-top: 30px;">
-If country is not in list, add new one <a (click)="goToHome()">HERE</a>
+If country is not in list, add new one <a (click)="goToAddCountry()">HERE</a>
 </h3>
 <!-- will add a new component for adding a country 
  for now will re-direct to home page 
