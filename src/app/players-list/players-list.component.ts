@@ -16,9 +16,6 @@ export class PlayersListComponent implements OnInit {
   players: any;
   constructor(private service: PlayerService) { }
 
-  refresh(): void {
-    window.location.reload();
-}
 
   ngOnInit(): void {
     this.service.getPlayers().subscribe(response => {

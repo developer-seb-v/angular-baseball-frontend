@@ -1,18 +1,34 @@
-<form [formGroup]="playerForm" (ngSubmit)="onSubmit()">
-<label>player number</label>
-<input  formControlName="playerNumber" >
+
+<div >
+<form id="form" [formGroup]="playerForm" (ngSubmit)="onSubmit()">
+<label>Player Number</label>
+<input  formControlName="playerNumber"  placeholder="e.g. 10">
 <br>
-<label>first name</label>
-<input formControlName="firstName" >
+<label>First Name</label>
+<input formControlName="firstName" placeholder=" e.g. Jackie">
 <br>
-<label>last name</label>
-<input formControlName="lastName" >
+<label>Last Name</label>
+<input formControlName="lastName" placeholder="e.g. Robinson">
 <br>
-<label>position</label>
-<input formControlName="position" >
+<label>Position</label>
+<select formControlName="position">
+    <option *ngFor="let p of positions" [value]="p.PositionNumber">
+        {{p.PositionNumber}} : {{p.PositionName}}
+    </option>
+</select>
 <br>
-<label>country</label>
-<input formControlName="country" >
+<label>Country</label>
+<select formControlName="country">
+<option  *ngFor="let c of countries"[value]="c.countryId">
+    {{c.countryName}} : {{c.countryId}}
+</option>
+</select>
 <br>
-<button type="submit" >add player</button>
+<button type="submit" >Add Player</button>
 </form>
+</div>
+<h3 style="margin-top: 30px;">
+If country is not in list, add new one <a (click)="goToHome()">HERE</a>
+</h3>
+<!-- will add a new component for adding a country 
+ for now will re-direct to home page -->
