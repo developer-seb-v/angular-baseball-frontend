@@ -4,7 +4,7 @@
 
   button {
     margin: 5px;
-    
+
   }
 
   #app-icon {
@@ -12,4 +12,8 @@
     color: black;
   }
 
-  
+  #app-icon:hover {
+    cursor : pointer;
+  }
+
+

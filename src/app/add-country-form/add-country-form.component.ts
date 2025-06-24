@@ -23,8 +23,7 @@ export class AddCountryFormComponent implements OnInit {
   }
 
   countryForm = this.fb.group({
-    countryId: ['', Validators.minLength(1)],
-    countryName: ['', Validators.required],
+    countryName: ['', Validators.required]
   });
 
   header: HttpHeaders = new HttpHeaders({

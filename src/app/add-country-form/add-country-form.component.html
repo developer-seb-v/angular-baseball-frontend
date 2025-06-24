@@ -1,12 +1,8 @@
 
 <div id="card">
     <form id="form" [formGroup]="countryForm" (ngSubmit)="onSubmit()">
-    <label>Country Id</label>
-    <input  formControlName="countryId"  placeholder="e.g. unique number">
-    <br>
     <label>Country Name</label>
     <input formControlName="countryName" placeholder=" e.g. Canada">
-    <br>
     <button type="submit" >Add Country</button>
     </form>
 </div>

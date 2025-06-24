@@ -17,4 +17,8 @@ export class NavbarComponent {
   goToHome(){
     this.router.navigate(['player-list']);
   }
+
+  goToCountry(){
+    this.router.navigate(['app-add-country-form']);
+  }
 }

@@ -1,9 +1,10 @@
 <mat-toolbar>
     <span >
-        <a id="app-icon"> Baseball App</a>
+        <a id="app-icon" [routerLink]="" (click)="goToHome()"> Baseball App</a>
+
     </span>
     <span class="spacer"></span>
     <button mat-button (click)="goToHome()">Home</button>
     <button mat-button (click)="goToAdd()">Add Player</button>
-    <button mat-button>Information</button>
+    <button mat-button (click)="goToCountry()">Countries</button>
 </mat-toolbar>
