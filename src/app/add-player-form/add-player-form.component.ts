@@ -21,12 +21,13 @@ export class AddPlayerFormComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.http.get("http://localhost:5151/api/player/country").subscribe(
+    this.http.get("http://localhost:5151/api/country/country").subscribe(
       response => {
         this.countries = response;
       }
     )
   }
+
 
   goToAddCountry(){
     this.router.navigate(['app-add-country-form']);
@@ -69,7 +70,7 @@ export class AddPlayerFormComponent implements OnInit {
       subscribe((res) => {
         console.log(res, this.goToHome());
       })
-    }else {alert("Please fill out fields")}
+    }else {alert("Please fill out fields")} 
    
   }
 

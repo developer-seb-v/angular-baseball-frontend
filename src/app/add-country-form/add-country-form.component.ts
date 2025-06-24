@@ -16,7 +16,7 @@ export class AddCountryFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.http
-      .get('http://localhost:5151/api/player/country')
+      .get('http://localhost:5151/api/country/country')
       .subscribe((response) => {
         this.countries = response;
       });
@@ -36,7 +36,7 @@ export class AddCountryFormComponent implements OnInit {
     if (this.countryForm.valid) {
       this.http
         .post(
-          'http://localhost:5151/api/player/addcountry',
+          'http://localhost:5151/api/country/addcountry',
           this.countryForm.value,
           { headers: this.header }
         )
