@@ -2,17 +2,16 @@
 <div id="card">
     <form id="form" [formGroup]="countryForm" (ngSubmit)="onSubmit()">
     <label>Country Name</label>
-    <input formControlName="countryName" placeholder=" e.g. Canada">
+    <input  (keyup.enter)="onSubmit()"  formControlName="countryName" placeholder=" e.g. Canada">
     <button type="submit" >Add Country</button>
     </form>
 </div>
 <br>
 
 <div>
-    <h2>List of countries</h2>
+    <h2 style="margin: 10px;">List of countries</h2>
     <li *ngFor="let c of countries">
-       <span style="margin: 3px;">{{c.countryId}}</span> 
-       <span>{{c.countryName}}</span>
+        <span style="margin: 10px;"><b>{{c.countryName}}</b></span>
     </li>
  
 </div>
