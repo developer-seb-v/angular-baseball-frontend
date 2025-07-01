@@ -1,0 +1,25 @@
+mat-card {
+    margin: 10px;
+    width: 200px;
+  }
+
+  mat-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.container-sm {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  mat-card-title {
+    padding: 5px;
+  }
+
+  mat-card-subtitle {
+    padding: 2px;
+    margin: 3px;
+  }

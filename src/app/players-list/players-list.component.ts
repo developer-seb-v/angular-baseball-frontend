@@ -1,7 +1,5 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { PlayerService } from './player.service';
-import { Router } from '@angular/router';
-
 
 
 @Component({

@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddCountryFormComponent } from './add-country-form/add-country-form.component';
+import { UpdatePlayer } from './update-player/update-player';
 
 // will most likely re-do code with modules for each component 
 @NgModule({
@@ -25,7 +26,8 @@ import { AddCountryFormComponent } from './add-country-form/add-country-form.com
     PlayersListComponent,
     NavbarComponent,
     AddPlayerFormComponent,
-    AddCountryFormComponent
+    AddCountryFormComponent,
+    UpdatePlayer
   ],
   imports: [
     BrowserModule,

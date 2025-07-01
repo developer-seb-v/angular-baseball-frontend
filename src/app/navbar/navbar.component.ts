@@ -21,4 +21,8 @@ export class NavbarComponent {
   goToCountry(){
     this.router.navigate(['app-add-country-form']);
   }
+
+  goToUpdate(){
+    this.router.navigate(['app-update-player']);
+  }
 }
