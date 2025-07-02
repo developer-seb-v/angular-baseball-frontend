@@ -66,7 +66,7 @@ export class AddPlayerFormComponent implements OnInit {
   onSubmit() {
     if (this.playerForm.valid)
     {
-       this.http.post('http://localhost:5151/api/player/addplayerobject', this.playerForm.value, { headers: this.header }).
+       this.http.post('http://localhost:5151/api/player/add', this.playerForm.value, { headers: this.header }).
       subscribe((res) => {
         console.log(res, this.goToHome());
       })
